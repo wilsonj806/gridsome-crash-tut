@@ -3,7 +3,7 @@
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <h1>Hello, world!</h1>
-    <div v-for="edge in $page.allDocs.edges" v-bind:key="edge.node.id">
+    <div v-for="edge in $page.allPosts.edges" v-bind:key="edge.node.id">
       <g-link v-bind:to="edge.node.path">
       {{ edge.node.title }}
       </g-link>
@@ -13,8 +13,8 @@
 </template>
 
 <page-query>
-query Documentation {
-  allDocs: allDocumentation {
+query Posts {
+  allPosts {
     edges {
       node {
         id

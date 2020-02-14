@@ -12,15 +12,15 @@ module.exports = {
       use: '@gridsome/vue-remark',
       options: {
         // GraphQL type name
-        typeName: 'Documentation',
+        typeName: 'Posts',
         // where to find your MD files
-        baseDir: './src/docs',
+        baseDir: './posts',
 
         // URL to navigate to
-        pathPrefix: '/docs',
+        pathPrefix: '/posts',
 
         // Vue template location
-        template: './src/templates/Documentation.vue'
+        template: './src/templates/Post.vue'
       }
     }
   ]
