@@ -1,14 +1,5 @@
-# Default starter for Gridsome
+# Gridsome Remark Tut
+## Overview
+Gridsome is the Vue version of Gatsby.js essentially. A lot of the patterns are based on Gatsby but with some differences. This tutorial repo is based on Luke Diebold's [Gridsome Remark](https://www.youtube.com/watch?v=e-ThzHtBnys&list=PLFZAa7EupbB61QMSYFB8YX9qQUKnWxu_M&index=2) tutorial series.
 
-This is the project you get when you run `gridsome create new-project`.
-
-### 1. Install Gridsome CLI tool if you don't have
-
-`npm install --global @gridsome/cli`
-
-### 2. Create a Gridsome project
-
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+## Additional Notes
