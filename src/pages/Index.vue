@@ -38,7 +38,5 @@ export default {
 .home-links a {
   margin-right: 1rem;
 }
-h1 {
-  color: pink;
-}
+
 </style>
