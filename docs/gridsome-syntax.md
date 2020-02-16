@@ -78,3 +78,71 @@ layout:
 ---
 ```
 Where here, layout actually expands out into an object with nested values *component* and *props*. Props here is the list of props we want to inject into our custom layout(Focus.vue here) and component is the layout component we're using.
+
+## Tagging and Referencing Nodes
+Tagging collections is a bit more involved than what the tutorial series I'm using says it is. First let's go back to our `gridsome.config.js` file.
+
+Adding a new Tag type is straight-forwards, but our Posts type won't know about our Tag type. So we need to relate Tags to Posts via the "refs" key like so:
+```js
+  {
+    // again similar to Webpack loader configs
+    use: '@gridsome/vue-remark',
+    options: {
+      // GraphQL type name
+      typeName: 'Posts',
+      // where to find your MD files
+      baseDir: './posts',
+
+      // URL to navigate to
+      pathPrefix: '/posts',
+
+      // Vue template location
+      template: './src/templates/Post.vue',
+
+      refs: {
+        tags: 'Tag'
+      }
+    }
+  },
+```
+This is analogous to adding a foreign key in SQL and lets you access Tags documents when you query for Posts like so:
+```xml
+<page-query>
+query Posts($id: ID!) {
+  posts(id: $id) {
+    id
+    author
+    title
+    path
+    tags {
+      id
+      color
+    }
+    created_at
+  }
+}
+</page-query>
+```
+
+Then if we want to query the opposite thing, find Posts with the queried tag, we use the below:
+```xml
+<page-query>
+query Tag($id: ID!) {
+  tag(id: $id) {
+    id
+    belongsTo {
+      edges {
+        node {
+          ...on Posts {
+            id
+          	title
+            path
+        	}
+        }
+      }
+    }
+  }
+}
+</page-query>
+```
+Where we need to actually add `belongsTo` into our query and then a `... on Posts` deeper into that query tree.

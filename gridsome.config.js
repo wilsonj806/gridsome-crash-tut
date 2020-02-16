@@ -12,6 +12,22 @@ module.exports = {
       use: '@gridsome/vue-remark',
       options: {
         // GraphQL type name
+        typeName: 'Tag',
+        // where to find your MD files
+        baseDir: './tags',
+
+        // URL to navigate to
+        pathPrefix: '/tags',
+
+        // Vue template location
+        template: './src/templates/Tag.vue',
+      }
+    },
+    {
+      // again similar to Webpack loader configs
+      use: '@gridsome/vue-remark',
+      options: {
+        // GraphQL type name
         typeName: 'Posts',
         // where to find your MD files
         baseDir: './posts',
@@ -20,8 +36,13 @@ module.exports = {
         pathPrefix: '/posts',
 
         // Vue template location
-        template: './src/templates/Post.vue'
+        template: './src/templates/Post.vue',
+
+        refs: {
+          tags: 'Tag'
+        }
       }
-    }
+    },
+
   ]
 }

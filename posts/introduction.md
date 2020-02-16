@@ -3,6 +3,8 @@ title: Introduction Things
 author: Wilson
 layout:
   component: ~/layouts/Sidebar.vue
+tags: [tutorial]
+created_at: 2020-02-16 11:38:03
 ---
 
 # Wow I'm introducing myself

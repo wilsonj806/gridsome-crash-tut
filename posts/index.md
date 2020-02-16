@@ -5,6 +5,7 @@ layout:
   component: ~/layouts/Focus.vue
   props:
     color: pink
+tags: [vue, tutorial]
 ---
 
 <!-- FIXME Vue-Remark's custom props doesn't play well with Gridsome -->

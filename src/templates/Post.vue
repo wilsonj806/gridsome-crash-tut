@@ -3,6 +3,11 @@
     <!-- Markdown content slots in here -->
     <h1>{{ $page.posts.title }}</h1>
     <h3>{{ $page.posts.author }}</h3>
+    <p>{{ $page.posts.created_at }}</p>
+    <p style="font-weight: 600;">Tags:</p>
+    <div v-for="(tag, i) in $page.posts.tags" :key="i">
+    <g-link :style="`background: ${tag.color}; border: 1px solid black`" :to="tag.path">{{ tag.id }}</g-link>
+    </div>
     <VueRemarkContent>
       <template v-slot:ad>
         <Ad/>
@@ -18,6 +23,12 @@ query Posts($id: ID!) {
     author
     title
     path
+    tags {
+      id
+      color
+      path
+    }
+    created_at
   }
 }
 </page-query>
