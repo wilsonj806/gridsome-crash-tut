@@ -1,7 +1,8 @@
 ---
 title: My Custom Post
 author: Jane doe
-layout: ~/layouts/Focus.vue
+layout:
+  component: ~/layouts/Focus.vue
 ---
 
 

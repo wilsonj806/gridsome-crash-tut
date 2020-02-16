@@ -63,6 +63,9 @@ And then when we render it, it'd render a component tree resembling the below:
 Where our Sidebar component is rendered first, then our Remark content gets slotted into our Sidebar.
 
 ## Prop injection
+NOTE: If you add a custom component to your markdown, YOU MUST ALSO SPEC "layout" WITH THE NESTED COMPONENT PROPERTY IN SUBSEQUENT MARKDOWN FILES.
+- this is as of @gridsome/vue-remark v0.1.9
+
 Props can be injected in a similar way but looks like so:
 ```md
 ---

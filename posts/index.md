@@ -1,12 +1,13 @@
 ---
 title: My Post
-author: Jane doe
+author: Jane
 layout:
   component: ~/layouts/Focus.vue
   props:
     color: pink
 ---
 
+<!-- FIXME Vue-Remark's custom props doesn't play well with Gridsome -->
 # U wot m8
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus arcu id quam tempus maximus. Duis sed dolor nibh. Morbi id nibh ac diam euismod lobortis. Nam at eleifend enim. Maecenas cursus risus vel sapien consequat efficitur. Donec volutpat, neque sed scelerisque convallis, libero dui lacinia odio, quis semper nibh orci eget purus. Integer nec porttitor purus, quis blandit diam. Sed ac feugiat metus. Phasellus semper dui ultrices erat imperdiet porta. Sed in volutpat lorem, quis sagittis leo. Etiam ac ornare velit, vel malesuada quam. Aenean nec tellus sit amet orci lobortis dapibus ut vitae tortor. Pellentesque a dolor in massa ultricies euismod in id enim.

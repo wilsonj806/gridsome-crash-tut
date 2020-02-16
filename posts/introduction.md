@@ -1,7 +1,8 @@
 ---
 title: Introduction Things
 author: Wilson
-layout: ~/layouts/Sidebar.vue
+layout:
+  component: ~/layouts/Sidebar.vue
 ---
 
 # Wow I'm introducing myself
